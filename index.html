@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set karakter encoding untuk dokumen -->
+    <meta charset="UTF-8">
+    <!-- Set viewport agar sesuai dengan ukuran layar perangkat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman -->
+    <title>Permainan Tebak Angka</title>
+    <!-- Menghubungkan ke file CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Kontainer utama untuk permainan -->
+    <div class="game-container">
+        <!-- Judul permainan -->
+        <h1>Permainan Tebak Angka</h1>
+        
+        <!-- Bagian pengaturan permainan -->
+        <div id="game-setup">
+            <!-- Input untuk menentukan rentang angka yang akan ditebak -->
+            <label for="range">Rentang Angka (1 - X): </label>
+            <input type="number" id="range" min="10" max="1000" value="100">
+            <br>
+            <!-- Input untuk menentukan jumlah kesempatan menebak -->
+            <label for="attempts">Kesempatan Menebak: </label>
+            <input type="number" id="attempts" min="1" max="20" value="5">
+            <br>
+            <!-- Pilihan mode permainan (singleplayer atau multiplayer) -->
+            <label for="mode">Mode Permainan: </label>
+            <select id="mode">
+                <option value="singleplayer">Singleplayer</option>
+                <option value="multiplayer">Multiplayer</option>
+            </select>
+            <br>
+            <!-- Input untuk mengatur waktu permainan dalam detik -->
+            <label for="timer">Pengaturan Waktu (detik): </label>
+            <input type="number" id="timer" min="10" max="300" value="60">
+            <br>
+            <!-- Tombol untuk memulai permainan -->
+            <button id="start-game">Mulai Permainan</button>
+        </div>
+
+        <!-- Bagian permainan aktif -->
+        <div id="game-play" class="hidden">
+            <!-- Menampilkan rentang angka yang harus ditebak -->
+            <p>Angka Yang Di Tebak Antara 1 dan <span id="max-range"></span></p>
+            <!-- Menampilkan sisa kesempatan menebak -->
+            <p>Kesempatan Menebak: <span id="remaining-attempts"></span></p>
+            <!-- Menampilkan waktu yang tersisa -->
+            <p>Waktu Tersisa: <span id="time-remaining"></span> detik</p>
+            <!-- Input untuk memasukkan tebakan angka -->
+            <input type="number" id="guess-input" placeholder="Masukkan Tebakan Anda">
+            <!-- Tombol untuk mengirimkan tebakan -->
+            <button id="submit-guess">Tebak</button>
+            <!-- Menampilkan feedback berdasarkan tebakan -->
+            <p id="feedback"></p>
+        </div>
+
+        <!-- Bagian hasil permainan -->
+        <div id="game-result" class="hidden">
+            <!-- Pesan hasil permainan -->
+            <h2 id="result-message"></h2>
+            <!-- Menampilkan total jumlah tebakan yang dilakukan -->
+            <p>Total Tebakan: <span id="total-guesses"></span></p>
+            <!-- Tombol untuk memulai permainan lagi -->
+            <button id="play-again">Main Lagi</button>
+        </div>
+    </div>
+    <!-- Menghubungkan ke file JavaScript eksternal untuk logika permainan -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* Mengatur gaya umum untuk elemen body */
+body {
+    /* Mengatur jenis font untuk seluruh halaman */
+    font-family: Arial, sans-serif;
+    /* Mengatur layout dengan flexbox dan membuat konten berada di tengah layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Mengatur tinggi layar agar 100% dari viewport height */
+    height: 100vh;
+    /* Mengatur warna latar belakang halaman */
+    background-color: #f4f4f4;
+    /* Menghilangkan margin default */
+    margin: 0;
+}
+
+/* Mengatur gaya untuk kontainer permainan */
+.game-container {
+    /* Mengatur warna latar belakang kontainer */
+    background-color: #ffffff;
+    /* Memberi padding di dalam kontainer */
+    padding: 20px;
+    /* Membulatkan sudut kontainer */
+    border-radius: 10px;
+    /* Menambahkan efek bayangan untuk kontainer */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Mengatur teks agar berada di tengah */
+    text-align: center;
+    /* Mengatur lebar maksimal kontainer */
+    max-width: 400px;
+    /* Mengatur lebar kontainer agar 100% dari elemen parent */
+    width: 100%;
+}
+
+/* Mengatur elemen dengan kelas 'hidden' agar tidak ditampilkan */
+.hidden {
+    display: none;
+}
+
+/* Mengatur gaya umum untuk input, select, dan button */
+input, select, button {
+    /* Menambahkan margin atas pada elemen */
+    margin-top: 10px;
+    /* Menambahkan padding di dalam elemen */
+    padding: 10px;
+    /* Mengatur lebar elemen agar 100% dari parent */
+    width: 100%;
+    /* Mengatur ukuran font dalam elemen */
+    font-size: 16px;
+}
+
+/* Mengatur gaya untuk elemen button */
+button {
+    /* Mengatur warna latar belakang tombol */
+    background-color: #007bff;
+    /* Mengatur warna teks dalam tombol */
+    color: #ffffff;
+    /* Menghapus border default */
+    border: none;
+    /* Membulatkan sudut tombol */
+    border-radius: 5px;
+    /* Mengubah kursor menjadi pointer saat berada di atas tombol */
+    cursor: pointer;
+}
+
+/* Mengatur gaya saat tombol dihover (dilewati kursor) */
+button:hover {
+    /* Mengubah warna latar belakang tombol saat dihover */
+    background-color: #0056b3;
+}
+
+/* Mengatur gaya untuk elemen dengan id 'feedback' */
+#feedback {
+    /* Menambahkan margin atas pada elemen */
+    margin-top: 20px;
+    /* Membuat teks menjadi tebal */
+    font-weight: bold;
+}
+
+/* Mengatur gaya untuk elemen h2 di dalam elemen dengan id 'game-result' */
+#game-result h2 {
+    /* Mengatur warna teks menjadi hijau */
+    color: #28a745;
+}
